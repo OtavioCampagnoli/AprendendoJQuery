@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de like</title>
+    <script src="../001-Introducao/Biblioteca/jquery-3.6.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        .container{
+            text-align: center;
+            margin: 15% 15%;
+            display: flex;
+            flex-direction: row;    
+        }
+
+        .operador__imagem{
+            width: 300px;
+            height: 250px;
+            margin: 2% 10%;
+            padding: 2.5%;
+            border: 5px solid black;            
+        }
+
+        #qntLike{
+            font-size: 235px;   
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="soma.png" alt="Operador Soma" class="operador__imagem" id="mais__icon">
+        <span id="qntLike">0</span>
+        <img src="subtracao.png" alt="Operador Menos" class="operador__imagem" id="menos__icon">
+    </div>
+
+    <script>
+        var botaoMais = $("#mais__icon");
+        var botaoMenos = $("#menos__icon");
+        var like = $("#qntLike")
+
+        const somarLike = (like) => 
+        {
+            var contador = parseInt(like.text());
+            like.text(contador + 1)   
+        }
+
+        const menosLike = (like) => 
+        {
+            var contador = parseInt(like.text());
+            if(contador <= 0)
+                return;
+            else
+                like.text(contador - 1);
+                   
+        }
+
+        botaoMais.on("click", function()
+        {
+            var a = somarLike(like);
+            
+        });
+
+        botaoMenos.on("click", function()
+        {
+            var a = menosLike(like);
+            
+            
+        });
+    </script>
+
+</body>
+</html>
