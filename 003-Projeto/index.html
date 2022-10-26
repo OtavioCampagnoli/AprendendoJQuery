@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack</title>
+    <style>
+        *{
+            position: relative;
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .icone{
+            text-align: center;
+            margin: 15% 40%;
+            border: 5px solid red;
+            width: 20%;
+        }
+        #contador{
+            display: block;
+            font-size: 100px;
+            margin: 50px 0;
+        }
+        #msgAgradecimento{
+            display: none;
+            font-size: 50px;
+            margin-top: 0;
+            text-align: center;
+            color: grey;
+        }
+
+    </style>
+    <script src="../001-Introducao/Biblioteca/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    
+    <div class="icone">
+        <img src="thumbup.png" alt="Thumbup" id="thumbup__icon">
+        <span id="contador">0 like</span>
+        <h1 id="msgAgradecimento">Obrigado pelo seu FeedBack!</h1>
+    </div>
+    
+    
+    
+    <script>
+        var botao = $(".icone");
+        botao.on("click", function()
+        {
+            $("#contador").text("1 like!");
+            $("#msgAgradecimento").css("display", "block");
+            
+        });
+
+    </script>
+</body>
+</html>
