@@ -7,50 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setando uma classe</title>
     <script src="../001-Introducao/Biblioteca/jquery-3.6.1.min.js"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    <link rel="stylesheet" href="style2.css"></link>
+    
 
-        .container {
-            background-color: blue;
-            margin: 50px;
-        }
 
-        .teste {
-            background-color: red;
-        }
-    </style>
 </head>
 
 <body>
 
     <div class="container">
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam enim culpa laudantium, cum eos, quasi
-            odio cupiditate, alias ullam laboriosam dolor officiis quam porro vero neque veniam quo qui ut!
-        </p>
+
+        <div class="caixa caixaUm">
+            <p>
+                AddClass();
+            </p>
+        </div>
+
+        <div class="caixa caixaDois blue">
+            <p>
+                RemoveClass();
+            </p>
+        </div>
+
+        <div class="caixa caixaTres">
+            <p>
+                ToggleClass();
+            </p>
+        </div>
+
     </div>
 
-    <button id="botao">
+    <script src = "script.js"></script>
 
-    </button>
-    <script>
-        $(document).ready(function ()
-        {
-            var caixa = $(".container");
-            
-            $("#botao").on("click", function ()
-            {
-                caixa.removeClass("container");
-                caixa.addClass("teste");
-            });
-            
-        });
-    </script>
+
 </body>
 
 </html>

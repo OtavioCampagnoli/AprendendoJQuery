@@ -1,0 +1,7 @@
+div {
+    background: red;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    text-align: center;
+}

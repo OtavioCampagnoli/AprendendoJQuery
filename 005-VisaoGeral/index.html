@@ -7,16 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste Jquery</title>
     <script src="../001-Introducao/Biblioteca/jquery-3.6.1.min.js"></script>
-
-    <style>
-        div {
-            background: red;
-            height: 10px;
-            width: 10px;
-            position: absolute;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style2.css"></link>
 </head>
 
 <body>
@@ -27,20 +18,21 @@
     <script>
 
         // Criando uma função
-        const funcao = (container) =>
+        const funcao = ( container ) =>
         {
-           container.css("width", "500px");
-           container.css("height", "500px");
-           container.css("color", "blue");
-           container.css("background-color", "green");
+            container.css( "width", "500px" );
+            container.css( "height", "500px" );
+            container.css( "color", "blue" );
+            container.css( "background-color", "green" );
         }
-        $(document).ready(function () {
-            var container = $("button").on("click", function ()
+        $( document ).ready( function ()
+        {
+            var container = $( "button" ).on( "click", function ()
             {
-                funcao(container);
-            });
+                funcao( container );
+            } );
 
-        });    
+        } );    
     </script>
 </body>
 
