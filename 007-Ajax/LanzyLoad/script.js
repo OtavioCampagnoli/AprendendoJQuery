@@ -1,29 +1,40 @@
+var area = $( ".area" );
+
+function isOnScreen(element)
+{
+    var win = $(window);
+    var screenTop = win.scrollTop();
+    var screenBottom = screenTop + win.height();
+
+    var elementTop = element.offset().top;
+    var elementBottom = elementTop + element.height();
+
+    return elementBottom > screenTop && elementTop < screenBottom;
+}
+
+
 $( document ).ready( function ()
 {
-
-    var area = $( ".area" );
     var loading = false;
     $( document ).on( "scroll", function ()
     {
-        if ( loading == false )
+
+        $( document ).on( "scroll", function ()
         {
-            if ( isOnScreen( $( area ) ) )
+            if ( loading == false )
             {
-                loading = true;
-
-                $.ajax
-                    ( {
-                        url: "index.html",
-                        method: GET
-                    } ).done( function ( resp )
+                if ( isOnScreen( $( area ) ) )
+                {
+                    $.ajax(
                     {
-                            $( area ).append( resp );
-                    } );
-
-
-
+                        url: "conteudo.html",
+                        method: "GET"
+                    } ).done( function ( resposta )
+                        {
+                            $( area ).append( resposta );
+                        } );
+                }
             }
-        }
-    }
+        } );
     } );
 } );
