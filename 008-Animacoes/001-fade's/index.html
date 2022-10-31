@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <script src="../../001-Introducao/Biblioteca/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <button type="button" id="btn-fadeout">Fade out</button>
+        <button type="button" id="btn-fadein">Fade in</button>
+        <button type="button" id="btn-fadetoggle">Fade toggle</button>
+        <button type="button" id="btn-fadeto">Fade to</button>    
+    </div>
+
+    <div style=" width: 200px; height: 200px; background-color: blue" id="div-azul"></div>
+    
+    <script>
+        $(document).ready(function ()
+        {
+            $("#btn-fadeout").on("click", function()
+            {
+                $("#div-azul").fadeOut();
+            });
+            
+            $("#btn-fadeout").on("click", function()
+            {
+                $("#div-azul").fadeIn();
+            });  
+
+            $("#btn-fadetoggle").on("click", function()
+            {
+                $("#div-azul").fadeToggle();
+            });
+
+            $("#btn-fadeto").on("click", function()
+            {
+                $("#div-azul").fadeTo(2000, 0.5);
+            });
+
+        });
+
+    </script>
+</body>
+</html>
