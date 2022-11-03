@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget: calendar</title>
+    <link rel="stylesheet" href="../Biblioteca/jquery-ui.css">
+    <script src="../Biblioteca/jquery-ui.js"></script>
+    <script src="../../001-Introducao/Biblioteca/jquery-3.6.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 20px 60px;
+            
+        }
+
+        fieldset {
+            padding: 20px;
+        }
+
+        legend{
+            font-size: 28px;
+            margin: 2px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function ()
+        {
+            $('#dataNascimento').datepicker(
+            {
+                showOn: "both",
+                buttonImage: "",
+                buttonImageOnly: true
+            });
+        });
+
+        
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <fieldset>
+            <legend>Cadastro teste</legend>
+            <form action="">
+                <label for="#dataNascimento">Informe sua data de nascimento</label>
+                <input type="date" name="dataNascimento" value="" id="dataNascimento">
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
