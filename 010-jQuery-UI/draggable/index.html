@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos: draggable</title>
+    <style>
+        #div-test {
+            background-color: gray;
+            border: 2px solid blue;
+            width: 100px;
+            height: 60px;
+            margin: 20px;
+            display: block;
+        }
+    </style>
+
+    <script src="../../001-Introducao/Biblioteca/jquery-3.6.1.min.js"></script>
+    <script src="../Biblioteca/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function ()
+        {
+            $("#div-test").draggable();
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div id="div-test" class="draggable ui-draggable" style="position: relative;"></div>
+
+    </main>
+
+</body>
+
+</html>
